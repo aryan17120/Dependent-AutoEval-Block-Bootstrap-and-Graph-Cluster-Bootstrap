@@ -2,9 +2,11 @@
 
 Official implementation for the paper:
 
-> **AutoEval for Dependent Data via Block and Graph-Cluster Bootstrap**  
-> Aryan Saini, Vinayak M, Sanjay Singh  
-> *IEEE Transactions on Artificial Intelligence* (under review)
+> **AutoEval for Dependent Data via Block and Graph-Cluster Bootstrap**
+>
+> **Dependent AutoEval via Bootstrap Resampling for Time Series and Graph-Structured Data**
+>
+> *Anonymous submission — JMLR 2026*
 
 This repository extends the [AutoEval / PPI++ framework](https://github.com/Akoasm666/autoeval)
 to non-i.i.d. settings. Standard AutoEval fails under temporal or graph-structured
@@ -118,12 +120,11 @@ data/
 ## Citation
 
 ```bibtex
-@article{saini2025dependent,
-  title     = {{AutoEval} for Dependent Data via Block and Graph-Cluster Bootstrap},
-  author    = {Saini, Aryan and M, Vinayak and Singh, Sanjay},
-  journal   = {IEEE Transactions on Artificial Intelligence},
-  year      = {2025},
-  note      = {Under review}
+@article{dependent_autoeval_2026,
+  title   = {{AutoEval} for Dependent Data via Block and Graph-Cluster Bootstrap},
+  author  = {Anonymous},
+  journal = {Journal of Machine Learning Research},
+  year    = {2026}
 }
 ```
 
