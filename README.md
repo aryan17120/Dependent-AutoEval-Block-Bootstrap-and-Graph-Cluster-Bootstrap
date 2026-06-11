@@ -8,11 +8,7 @@ Official implementation for the paper:
 >
 > *Anonymous submission — JMLR 2026*
 
-This repository extends the [AutoEval / PPI++ framework](https://github.com/Akoasm666/autoeval)
-to non-i.i.d. settings. Standard AutoEval fails under temporal or graph-structured
-dependence because the i.i.d. variance estimator underestimates the true long-run
-variance, producing confidence intervals that are too narrow. We propose two
-bootstrap procedures that correct this without changing the point estimate.
+This repository extends the AutoEval / PPI++ framework to non-i.i.d. settings. Standard AutoEval fails under temporal or graph-structured dependence because the i.i.d. variance estimator underestimates the true long-run variance, producing confidence intervals that are too narrow. We propose two bootstrap procedures that correct this without changing the point estimate.
 
 **Companion repository (covariate shift):**
 [Adaptive-AutoEval-Learning-Importance-Weights-from-Unlabeled-Data-under-Covariate-Shift](https://github.com/aryan17120/Adaptive-AutoEval-Learning-Importance-Weights-from-Unlabeled-Data-under-Covariate-Shift)
