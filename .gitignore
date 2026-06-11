@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Dataset files
+data/graphs/Cora/
+data/graphs/Citeseer/
+data/airquality/*.xlsx
+data/airquality/*.csv

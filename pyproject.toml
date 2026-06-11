@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dependent-autoeval"
+version = "0.1.0"
+description = "AutoEval for Dependent Data via Block and Graph-Cluster Bootstrap"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.2",
+    "networkx>=3.1",
+    "torch>=2.0",
+    "torch-geometric>=2.3",
+    "pandas>=1.5",
+    "matplotlib>=3.7",
+    "openpyxl>=3.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dependent_autoeval*"]
