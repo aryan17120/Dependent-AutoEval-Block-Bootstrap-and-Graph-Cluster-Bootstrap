@@ -10,11 +10,11 @@ Official implementation for the paper:
 
 ## The Problem
 
-The AutoEval framework combines small human-labeled datasets with large synthetic-label datasets via prediction-powered inference (PPI++) to produce statistically valid performance estimates. It works well — but only when observations are independent.
+The AutoEval framework combines small human-labeled datasets with large synthetic-label datasets via prediction-powered inference (PPI++) to produce statistically valid performance estimates. It works well ; but only when observations are independent.
 
-In practice, this assumption is routinely violated. Consider evaluating a model on sensor readings from an air quality station: consecutive measurements are correlated, so the i.i.d. variance estimator underestimates the true uncertainty. The resulting confidence interval is too narrow, and coverage collapses silently. The point estimate is unbiased — only the variance step is wrong.
+In practice, this assumption is routinely violated. Consider evaluating a model on sensor readings from an air quality station: consecutive measurements are correlated, so the i.i.d. variance estimator underestimates the true uncertainty. The resulting confidence interval is too narrow, and coverage collapses silently. The point estimate is unbiased , only the variance step is wrong.
 
-The same failure occurs on graph-structured data. Evaluating a GCN on Citeseer nodes treats each node as independent, ignoring the community structure that links neighboring predictions. Standard PPI++ coverage drops to 0.884 — below the nominal 0.900 — because the variance estimate ignores intra-community correlation.
+The same failure occurs on graph-structured data. Evaluating a GCN on Citeseer nodes treats each node as independent, ignoring the community structure that links neighboring predictions. Standard PPI++ coverage drops to 0.884 , below the nominal 0.900 , because the variance estimate ignores intra-community correlation.
 
 This failure mode affects any evaluation pipeline where data has temporal, spatial, or relational structure. No existing AutoEval method corrects for it.
 
@@ -223,7 +223,7 @@ data/
 The companion paper addresses covariate shift in AutoEval:
 
 **Adaptive AutoEval: Learning Importance Weights from Unlabeled Data under Covariate Shift**
-*Anonymous submission — NeurIPS 2026 Main Track*
+*Anonymous submission — NeurIPS 2026 Main Track* (Under Review)
 
 ---
 
