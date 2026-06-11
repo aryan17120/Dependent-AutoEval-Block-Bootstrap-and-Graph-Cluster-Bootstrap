@@ -65,7 +65,7 @@ For dependent data, the i.i.d. variance underestimates the true long-run varianc
 
 $$\sigma^2_{\mathrm{LRV}} = \sigma^2_Z \left(1 + 2\sum_{k=1}^{\infty} \rho_k\right)$$
 
-For an AR(1) process with autocorrelation ρ, the inflation factor is (1+ρ)/(1−ρ). At ρ=0.6 this is 4×, meaning standard PPI++ confidence intervals are roughly half as wide as they should be.
+For an AR(1) process with autocorrelation ρ, the inflation factor is (1+ρ)/(1−ρ). At ρ=0.5 this is 3×, and at ρ=0.7 it reaches 5.7×, meaning standard PPI++ confidence intervals can be less than half as wide as they should be.
 
 Both bootstrap procedures leave the PPI++ point estimate μ̂ and optimal λ* unchanged. Only the variance estimation step is corrected.
 
@@ -214,6 +214,11 @@ results/
 data/
 ├── graphs/README.md       # PyTorch Geometric auto-download
 └── airquality/README.md   # UCI manual download instructions
+├── pyproject.toml
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ---
