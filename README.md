@@ -94,6 +94,7 @@ Both bootstrap procedures leave the PPI++ point estimate μ̂ and optimal λ* un
 git clone https://github.com/[anonymous]/Dependent-AutoEval-Block-Bootstrap-and-Graph-Cluster-Bootstrap.git
 cd Dependent-AutoEval-Block-Bootstrap-and-Graph-Cluster-Bootstrap
 conda activate autoeval
+pip install -r requirements.txt
 pip install -e .
 ```
 
@@ -159,6 +160,29 @@ python scripts/compile_extension2_summary.py
 
 Each directory contains a CSV of per-trial results and PNG figures. CSVs and figures are version-controlled so results can be inspected without re-running.
 
+
+---
+
+## Reproducing Specific Tables and Figures
+
+| Table/Figure | Command | Output file |
+|---|---|---|
+| Table: AR(1) results | `python scripts/run_extension2a_ar1.py` | `results/extension2a/ext2a_results.csv` |
+| Fig: AR(1) coverage vs ρ | `python scripts/run_extension2a_ar1.py` | `results/extension2a/ext2a_rho_coverage.png` |
+| Fig: AR(1) coverage vs n | `python scripts/run_extension2a_ar1.py` | `results/extension2a/ext2a_n_main.png` |
+| Table: MA(2) results | `python scripts/run_extension2a_ma2.py` | `results/extension2a/ma2/ext2a_ma2_results.csv` |
+| Fig: MA(2) coverage vs θ | `python scripts/run_extension2a_ma2.py` | `results/extension2a/ma2/ext2a_ma2_theta_coverage.png` |
+| Fig: AR(1) vs MA(2) comparison | `python scripts/run_extension2a_ma2.py` | `results/extension2a/ma2/ext2a_ar1_vs_ma2.png` |
+| Table: Cora/Citeseer results | `python scripts/run_extension2b_graphs.py` | `results/extension2b/ext2b_*_results.csv` |
+| Fig: graph coverage and ESS | `python scripts/run_extension2b_graphs.py` | `results/extension2b/ext2b_combined.png` |
+| Table: Air Quality results | `python scripts/run_extension2_airquality.py` | `results/extension2_airquality/ext2_aq_n_results.csv` |
+| Fig: Air Quality time series | `python scripts/run_extension2_airquality.py` | `results/extension2_airquality/ext2_aq_timeseries.png` |
+| Fig: Air Quality block length sensitivity | `python scripts/run_extension2_airquality.py` | `results/extension2_airquality/ext2_aq_blocklen.png` |
+| Table: cross-dataset summary | `python scripts/compile_extension2_summary.py` | `results/extension2_summary/combined_coverage.png`, `dataset_comparison.png` |
+| Motivating figure (Fig. 1) | `python scripts/generate_motivating_figure.py` | `results/motivating_figure.png` |
+
+
+
 ### Expected Runtimes
 
 | Script | Runtime |
@@ -170,6 +194,23 @@ Each directory contains a CSV of per-trial results and PNG figures. CSVs and fig
 | `compile_extension2_summary.py` | ~1 min |
 
 All experiments run single-core CPU. Seed 42 throughout.
+
+---
+
+---
+
+## Hardware and Compute
+
+All experiments were run on a single consumer laptop CPU, with no GPU acceleration, cloud compute, or distributed training.
+
+**Hardware:** AMD Ryzen 7 5800H (8 cores, 16 logical processors), 16 GB RAM, NVIDIA RTX 3050 Laptop GPU (4 GB VRAM, unused — all experiments run CPU-only). OS: Windows 11 Home.
+
+**Total runtime:** approximately 15–20 minutes across all five scripts.
+
+**Memory:** all experiments run comfortably within 16 GB RAM; Air Quality and graph experiments peak under 1 GB.
+
+**Reproducibility:** all scripts use `np.random.seed(42)`; the bootstrap RNG additionally uses a fixed `np.random.RandomState(99)` independent of the trial seed. Results are deterministic given the package versions pinned in `requirements.txt`.
+
 
 ---
 
@@ -218,17 +259,6 @@ data/
 ├── LICENSE
 └── README.md
 ```
-
----
-
-## Companion Repository
-
-The companion paper addresses covariate shift in AutoEval:
-
-**Adaptive AutoEval: Learning Importance Weights from Unlabeled Data under Covariate Shift**
-*Anonymous submission — NeurIPS 2026 Main Track* (Under Review)
-
----
 
 ## Citation
 
