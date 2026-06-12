@@ -91,11 +91,15 @@ Both bootstrap procedures leave the PPI++ point estimate μ̂ and optimal λ* un
 ## Installation
 
 ```bash
-git clone https://github.com/[anonymous]/Dependent-AutoEval-Block-Bootstrap-and-Graph-Cluster-Bootstrap.git
-cd Dependent-AutoEval-Block-Bootstrap-and-Graph-Cluster-Bootstrap
+
+git clone https://anonymous.4open.science/r/Dependent-AutoEval-Valid-Confidence-Intervals-for-Prediction-Powered-Evaluation-under-DependenceDF17.git
+
+cd Dependent-AutoEval-Valid-Confidence-Intervals-for-Prediction-Powered-Evaluation-under-DependenceDF17
+
 conda activate autoeval
 pip install -r requirements.txt
 pip install -e .
+
 ```
 
 **Dependencies:** Python 3.10, NumPy 1.24, SciPy 1.10, scikit-learn 1.2, NetworkX 3.1, PyTorch ≥ 2.0, PyTorch Geometric 2.3, pandas 1.5, matplotlib 3.7.
