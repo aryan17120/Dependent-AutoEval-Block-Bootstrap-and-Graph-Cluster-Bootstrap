@@ -92,10 +92,12 @@ Both bootstrap procedures leave the PPI++ point estimate μ̂ and optimal λ* un
 
 ```bash
 
-git clone https://anonymous.4open.science/r/Dependent-AutoEval-Valid-Confidence-Intervals-for-Prediction-Powered-Evaluation-under-DependenceDF17.git
+Browse the anonymized repository at:
+https://anonymous.4open.science/r/Dependent-AutoEval-Valid-Confidence-Intervals-for-Prediction-Powered-Evaluation-under-DependenceDF17
+
+Or download it as a ZIP from the link above, then:
 
 cd Dependent-AutoEval-Valid-Confidence-Intervals-for-Prediction-Powered-Evaluation-under-DependenceDF17
-
 conda activate autoeval
 pip install -r requirements.txt
 pip install -e .
