@@ -1,8 +1,6 @@
-# Dependent AutoEval: Block Bootstrap and Graph-Cluster Bootstrap
+# Dependent AutoEval: Valid Confidence Intervals for Prediction-Powered Evaluation under Dependence
 
-Official implementation for the paper:
-
-**AutoEval for Dependent Data via Block and Graph-Cluster Bootstrap**
+**Dependent AutoEval: Valid Confidence Intervals for Prediction-Powered Evaluation under Dependence**
 
 *Anonymous submission — JMLR 2026*
 
@@ -236,7 +234,7 @@ The companion paper addresses covariate shift in AutoEval:
 
 ```bibtex
 @article{dependent_autoeval_2026,
-  title   = {{AutoEval} for Dependent Data via Block and Graph-Cluster Bootstrap},
+  title   = {Dependent {AutoEval}: Valid Confidence Intervals for Prediction-Powered Evaluation under Dependence},
   author  = {Anonymous},
   journal = {Journal of Machine Learning Research},
   year    = {2026}
